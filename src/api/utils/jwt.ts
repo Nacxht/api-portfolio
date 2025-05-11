@@ -22,7 +22,7 @@ export async function jwtVerify(token: string) {
   return decoded;
 }
 
-export async function jwtDecode(token: string) {
-  const { header, payload } = await decode(token);
+export function jwtDecode(token: string) {
+  const { header, payload } = decode(token);
   return { header, payload };
 }
