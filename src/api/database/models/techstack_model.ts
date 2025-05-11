@@ -1,5 +1,5 @@
 import { Techstack, TechstackCategory } from "../kv_schemas.d.ts";
-import { Model } from "./main_model.ts";
+import { Model } from "./base_model.ts";
 
 class TechstackModel extends Model {
   async get(category?: TechstackCategory, id?: string) {

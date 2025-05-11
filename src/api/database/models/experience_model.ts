@@ -1,5 +1,5 @@
 import { Experience } from "../kv_schemas.d.ts";
-import { Model } from "./main_model.ts";
+import { Model } from "./base_model.ts";
 
 export class ExperienceModel extends Model {
   async get(id?: string) {
