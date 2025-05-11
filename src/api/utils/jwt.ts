@@ -9,17 +9,20 @@ const secret = await crypto.subtle.generateKey(
   ["sign", "verify"],
 );
 
-async function jwtSign(payload: object, expiresIn: number): Promise<string> {
+export async function jwtSign(
+  payload: object,
+  expiresIn: number,
+): Promise<string> {
   const token = await sign({ ...payload, exp: expiresIn }, secret, "HS512");
   return token;
 }
 
-async function jwtVerify(token: string) {
+export async function jwtVerify(token: string) {
   const decoded = await verify(token, secret, "HS512");
   return decoded;
 }
 
-async function jwtDecode(token: string) {
+export async function jwtDecode(token: string) {
   const { header, payload } = await decode(token);
   return { header, payload };
 }
