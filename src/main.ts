@@ -2,6 +2,7 @@ import { Hono } from "@hono/hono";
 import { cors } from "@hono/hono/cors";
 import { config } from "./configs/env_config.ts";
 import { logger } from "./api/utils/logger.ts";
+import { routeInit } from "./api/routers/initializer/init.ts";
 
 const app = new Hono();
 export type App = typeof app;
@@ -13,6 +14,8 @@ app.use(
     origin: allowedOrigin,
   }),
 );
+
+routeInit(app);
 
 app.onError((_err, c) => {
   logger.error("An error happened");
