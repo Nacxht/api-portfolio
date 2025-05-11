@@ -1,10 +1,12 @@
 export interface Intro {
+  id: string;
   badges: string[];
   description: string;
   serviceDescription: string;
 }
 
 export interface Project {
+  id: string;
   name: string;
   description: string;
   thumbnail: string;
@@ -17,12 +19,14 @@ export interface Project {
 }
 
 export interface Experience {
+  id: string;
   dateRange: { start: string; end: string };
   title: string;
   description: string;
 }
 
 export interface Contact {
+  id: string;
   email?: string;
   linkedin?: string;
   github?: string;
@@ -36,16 +40,14 @@ export enum TechstackCategory {
 }
 
 export interface Techstack {
+  id: string;
   name: string;
   img: string;
   category: TechstackCategory;
 }
 
-export interface Techstacks {
-  currentUsed: {
-    techstacks: Techstack[];
-  };
-  interested: {
-    techstacks: Techstack[];
-  };
+export interface Token {
+  id: string;
+  userId: string;
+  expiresAt: number;
 }
