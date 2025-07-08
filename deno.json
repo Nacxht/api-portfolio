@@ -13,8 +13,7 @@
     "jsx": "precompile",
     "jsxImportSource": "hono/jsx",
     "strict": true,
-    "noImplicitAny": true,
-    "allowJs": false
+    "noImplicitAny": true
   },
 
   "lint": {
