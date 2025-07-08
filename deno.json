@@ -7,7 +7,7 @@
   },
   "tasks": {
     "start": "deno run --allow-net ./src/main.ts",
-    "dev": "deno serve -A --watch ./src/main.ts"
+    "dev": "deno serve -A --unstable-kv --watch ./src/main.ts"
   },
   "compilerOptions": {
     "jsx": "precompile",
