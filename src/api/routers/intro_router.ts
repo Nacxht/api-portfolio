@@ -1,9 +1,12 @@
 import { Hono } from "@hono/hono";
+import { IntroHandler } from "../handlers/intro_handler.ts";
 
 export const introRouter = new Hono().basePath("/intro");
-export type IntroRouter = typeof introRouter;
 
-introRouter.get("/:id", (c) => c.text("GET intro"));
-introRouter.post("/");
-introRouter.patch("/:id");
-introRouter.delete("/:id");
+introRouter.get("/:id", IntroHandler.get);
+
+// jwt middleware
+
+introRouter.post("/", IntroHandler.store);
+introRouter.patch("/:id", IntroHandler.edit);
+introRouter.delete("/:id", IntroHandler.destroy);
