@@ -1,9 +1,4 @@
-export interface Intro {
-  id: string;
-  badges: string[];
-  description: string;
-  serviceDescription: string;
-}
+import { TechstackCategory } from "./kv_enum.ts";
 
 export interface Project {
   id: string;
@@ -32,11 +27,6 @@ export interface Contact {
   github?: string;
   discord?: string;
   instagram?: string;
-}
-
-export enum TechstackCategory {
-  CURRENTLY_USED = "currently_used",
-  INTERESTED = "interested",
 }
 
 export interface Techstack {
