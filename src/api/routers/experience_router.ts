@@ -1,7 +1,7 @@
 import { Hono } from "@hono/hono";
 import { ExperienceHandler } from "../handlers/experience_handler.ts";
 
-export const experienceRouter = new Hono();
+export const experienceRouter = new Hono().basePath("/experience");
 
 experienceRouter.get("/", ExperienceHandler.get);
 

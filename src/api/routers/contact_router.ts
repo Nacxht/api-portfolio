@@ -1,7 +1,7 @@
 import { Hono } from "@hono/hono";
 import { ContactHandler } from "../handlers/contact_handler.ts";
 
-export const contactRouter = new Hono();
+export const contactRouter = new Hono().basePath("/contact");
 
 contactRouter.get("/", ContactHandler.get);
 contactRouter.get("/:id", ContactHandler.getById);

@@ -1,7 +1,7 @@
 import { Hono } from "@hono/hono";
 import { ProjectHandler } from "../handlers/project_handler.ts";
 
-export const projectRouter = new Hono().basePath("project");
+export const projectRouter = new Hono().basePath("/project");
 
 projectRouter.get("/", ProjectHandler.get);
 

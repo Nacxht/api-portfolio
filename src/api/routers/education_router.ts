@@ -1,7 +1,7 @@
 import { Hono } from "@hono/hono";
 import { EducationHandler } from "../handlers/education_handler.ts";
 
-export const educationRouter = new Hono();
+export const educationRouter = new Hono().basePath("/education");
 
 educationRouter.get("/", EducationHandler.get);
 
