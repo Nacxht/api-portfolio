@@ -8,5 +8,5 @@ introRouter.get("/:id", IntroHandler.get);
 // jwt middleware
 
 introRouter.post("/", IntroHandler.store);
-introRouter.patch("/:id", IntroHandler.edit);
+introRouter.put("/:id", IntroHandler.edit);
 introRouter.delete("/:id", IntroHandler.destroy);
