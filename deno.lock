@@ -1,27 +1,15 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
     "jsr:@hono/hono@^4.7.5": "4.7.5",
-    "jsr:@nhttp/nhttp@^2.0.2": "2.0.2",
-    "jsr:@nhttp/zod@^2.0.2": "2.0.2",
     "jsr:@std/dotenv@~0.225.3": "0.225.3",
     "npm:@types/node@*": "22.12.0",
     "npm:winston@^3.17.0": "3.17.0",
-    "npm:zod@3.23.8": "3.23.8"
+    "npm:zod@^4.0.17": "4.0.17"
   },
   "jsr": {
     "@hono/hono@4.7.5": {
       "integrity": "36a7e1b3db8a58e5dc2bd36a76be53346f0966e04c24c635c4d6f58875575b0a"
-    },
-    "@nhttp/nhttp@2.0.2": {
-      "integrity": "3f792cf5681c56d10e6fafa6c1c5f438b45dcba8037b08d5e593771aa6b3ebf8"
-    },
-    "@nhttp/zod@2.0.2": {
-      "integrity": "56179ebb1402512e95a783773bdcc84f35414121ed445d6286719e81b580c8f1",
-      "dependencies": [
-        "jsr:@nhttp/nhttp",
-        "npm:zod"
-      ]
     },
     "@std/dotenv@0.225.3": {
       "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
@@ -187,16 +175,16 @@
         "winston-transport"
       ]
     },
-    "zod@3.23.8": {
-      "integrity": "sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g=="
+    "zod@4.0.17": {
+      "integrity": "sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ=="
     }
   },
   "workspace": {
     "dependencies": [
       "jsr:@hono/hono@^4.7.5",
-      "jsr:@nhttp/zod@^2.0.2",
       "jsr:@std/dotenv@~0.225.3",
-      "npm:winston@^3.17.0"
+      "npm:winston@^3.17.0",
+      "npm:zod@^4.0.17"
     ]
   }
 }
